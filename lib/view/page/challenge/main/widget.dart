@@ -24,12 +24,14 @@ class MainDrawer extends StatelessWidget{
     return Drawer(
       child: ListView(
         children: [
-          /*const DrawerHeader(
+          const DrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.blue,
+              color: Colors.white,
             ),
-            child: Text('Pages'),
-          ),*/
+            child: SizedBox(
+              height: 10.0,
+            )
+          ),
           ListTile(
             leading: const Icon(Icons.home_outlined),
             title: const Text('메인'),
