@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MainAppBar({Key? key}) : super(key: key);
@@ -65,10 +66,18 @@ class MainDrawer extends StatelessWidget{
 }
 
 class ChallengeCard extends StatelessWidget{
-  const ChallengeCard({Key? key}) : super(key: key);
+  final double rate;
+
+  const ChallengeCard({
+    Key? key,
+    required this.rate,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    double percent = rate;
+    if (rate == .0) percent = .05;
+
     return Container(
       margin: const EdgeInsets.only(bottom: 10.0, top: 14.0),
         decoration: BoxDecoration(
@@ -89,7 +98,23 @@ class ChallengeCard extends StatelessWidget{
             children: [
               Text("오늘 들은 무게"),
               Text("모아이 석상"),
-              Text("다음 단계: 기린 까지")
+              Text("다음 단계: 기린 까지"),
+              Container(
+                width: 250,
+                //padding: const EdgeInsets.all(1.0),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Theme.of(context).colorScheme.outline),
+                  borderRadius: BorderRadius.circular(100.0),
+                ),
+                child: LinearPercentIndicator(
+                  padding: EdgeInsets.zero,
+                  lineHeight: 10,
+                  backgroundColor: Colors.transparent,
+                  progressColor: Colors.greenAccent.withOpacity(.3 + percent * 7 / 10),
+                  barRadius: const Radius.circular(10.0),
+                  percent: percent,
+                ),
+              ),
             ],
           )
         ],

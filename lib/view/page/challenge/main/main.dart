@@ -13,10 +13,10 @@ class ChallengeMainPage extends StatelessWidget {
         padding: const EdgeInsets.only(left:16.0, right: 16.0, top: 33.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text("오늘의 기록"),
-            ChallengeCard(),
-            ChallengeCard(),
+          children: const [
+            Text("오늘의 기록"),
+            ChallengeCard(rate: 0.1),
+            ChallengeCard(rate: 0.95),
           ],
         ),
       ),
