@@ -3,70 +3,38 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 // 임시 페이지기 때문에 stateful 사용
-class DeveloperPage extends StatefulWidget {
+class DeveloperPage extends StatelessWidget {
   const DeveloperPage({Key? key}) : super(key: key);
-
-  @override
-  State<DeveloperPage> createState() => _DeveloperPageState();
-}
-
-class _DeveloperPageState extends State<DeveloperPage> {
-  bool developerMode = true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: colorScheme.surface,
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            setState(() => developerMode = !developerMode);
-          },
-          icon: Icon(
-            developerMode ? Icons.toggle_on : Icons.toggle_off,
-          ),
-        ),
-        title: Text(developerMode ? '개발자 모드' : '앱 플로우 모드'),
-      ),
+      appBar: AppBar(),
       body: Center(
-        child: developerMode ? Column(
+        child: Column(
           children: [
             TextButton(
-              onPressed: () => Get.toNamed('/login'),
-              child: const Text('LoginPage'),
+              onPressed: () => Get.toNamed('/challenge/main'),
+              child: const Text('ChallengeMainPage'),
             ),
             TextButton(
-              onPressed: () => Get.toNamed('/register'),
-              child: const Text('RegisterPage'),
+              onPressed: () => Get.toNamed('/challenge/setting'),
+              child: const Text('ChallengeSettingPage'),
             ),
             TextButton(
-              onPressed: () => Get.toNamed('/main'),
-              child: const Text('MainPage'),
+              onPressed: () => Get.toNamed('/timer'),
+              child: const Text('TimerPage'),
             ),
             TextButton(
               onPressed: () => Get.toNamed('/detail'),
               child: const Text('DetailPage'),
             ),
             TextButton(
-              onPressed: () => Get.toNamed('/chat'),
-              child: const Text('ChatPage'),
+              onPressed: () => Get.toNamed('/record'),
+              child: const Text('RecordPage'),
             ),
-            TextButton(
-              onPressed: () => Get.toNamed('/addCrew'),
-              child: const Text('AddCrewPage'),
-            ),
-            TextButton(
-              onPressed: () => Get.toNamed('/myCrew'),
-              child: const Text('MyCrewPage'),
-            ),
-            // TextButton(
-            //   onPressed: () => Get.toNamed('/my'),
-            //   child: const Text('MyPage'),
-            // ),
           ],
-        ) : TextButton(
-          onPressed: () => Get.toNamed('/login'),
-          child: const Text('Start'),
         ),
       ),
     );
