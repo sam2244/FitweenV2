@@ -16,6 +16,7 @@ class ChallengeMainPage extends StatelessWidget {
           children: [
             const Text("오늘의 기록"),
             ChallengeCard(),
+            ChallengeCard(),
           ],
         ),
       ),

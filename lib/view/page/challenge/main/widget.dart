@@ -24,15 +24,35 @@ class MainDrawer extends StatelessWidget{
     return Drawer(
       child: ListView(
         children: [
-          const DrawerHeader(
+          /*const DrawerHeader(
             decoration: BoxDecoration(
               color: Colors.blue,
             ),
             child: Text('Pages'),
+          ),*/
+          ListTile(
+            leading: const Icon(Icons.home_outlined),
+            title: const Text('메인'),
+            onTap: () => {},
           ),
           ListTile(
-            leading: const Icon(Icons.logout),
-            title: const Text('Log Out'),
+            leading: const Icon(Icons.people_alt_outlined),
+            title: const Text('첼린지'),
+            onTap: () => {},
+          ),
+          ListTile(
+            leading: const Icon(Icons.book_outlined),
+            title: const Text('크루'),
+            onTap: () => {},
+          ),
+          ListTile(
+            leading: const Icon(Icons.dialpad),
+            title: const Text('컬렉션'),
+            onTap: () => {},
+          ),
+          ListTile(
+            leading: const Icon(Icons.settings),
+            title: const Text('설정'),
             onTap: () => {},
           ),
         ],
@@ -48,6 +68,7 @@ class ChallengeCard extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.only(bottom: 10.0, top: 14.0),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             border: Border.all(color: Colors.blueAccent)
