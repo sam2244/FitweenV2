@@ -10,6 +10,14 @@ class ChallengeMainPage extends StatelessWidget {
       drawer: MainDrawer(),
       appBar: MainAppBar(),
       body: Container(
+        padding: const EdgeInsets.only(left:16.0, right: 16.0, top: 33.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text("오늘의 기록"),
+            ChallengeCard(),
+          ],
+        ),
       ),
     );
   }
