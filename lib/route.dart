@@ -1,5 +1,6 @@
 /* 라우트 관련 */
 
+import 'package:fitweenV1/view/page/challenge/complete/complete.dart';
 import 'package:fitweenV1/view/page/challenge/main/main.dart';
 import 'package:fitweenV1/view/page/challenge/setting/setting.dart';
 import 'package:fitweenV1/view/page/challenge/timer/timer.dart';
@@ -25,6 +26,7 @@ class FWRoute {
     '/timer': const TimerPage(),
     '/challenge/main': const ChallengeMainPage(),
     '/challenge/setting': const ChallengeSettingPage(),
+    '/complete': const CompletePage(),
     '/detail': const DetailPage(),
     '/record': const RecordPage(),
   };

@@ -44,7 +44,7 @@ class TimerPage extends StatelessWidget {
                       ),
                       Expanded(
                         child: Container(
-                          padding: EdgeInsets.all(10.0),
+                          padding: const EdgeInsets.all(10.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -127,16 +127,12 @@ class TimerPage extends StatelessWidget {
                           child: Material(
                             borderRadius: BorderRadius.circular(150.0),
                             color: const Color(0xffe9dac1),
-                            child: InkWell(
-                              onTap: () {},
-                              borderRadius: BorderRadius.circular(150.0),
-                              child: SizedBox(
-                                width: 300.0,
-                                height: 300.0,
-                                child: Center(
-                                  child: SvgPicture.asset(
-                                    TimerPresenter.assets[controller.assetIndex],
-                                  ),
+                            child: SizedBox(
+                              width: 300.0,
+                              height: 300.0,
+                              child: Center(
+                                child: SvgPicture.asset(
+                                  TimerPresenter.assets[controller.assetIndex],
                                 ),
                               ),
                             ),
@@ -156,8 +152,7 @@ class TimerPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const SizedBox(height: 114.0),
-                  if (controller.state == ExerciseState.ongoing
-                      || controller.state == ExerciseState.pause)
+                  if (controller.state == ExerciseState.pause)
                   CircledButton(
                     text: '취소',
                     onPressed: controller.stopExercise,

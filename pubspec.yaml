@@ -26,6 +26,8 @@ dependencies:
   material_tag_editor: ^0.1.2
   flutter_svg: ^1.1.1+1
   percent_indicator: ^4.2.2
+  animated_flip_counter: ^0.2.4
+  lottie: ^1.4.1
 
 dev_dependencies:
   flutter_test:
@@ -54,6 +56,10 @@ flutter:
     - assets/image/page/timer/whale.svg
     - assets/image/page/timer/sit.svg
     - assets/image/page/timer/stand.svg
+    - assets/image/page/complete/moai.svg
+    - assets/image/page/complete/trophy.svg
+    - assets/image/page/complete/giraffe.svg
+    - assets/json/lottie/level_up.json
     - assets/json/exercises.json
 
 fonts:
