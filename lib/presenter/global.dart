@@ -1,3 +1,4 @@
+import 'package:fitweenV1/presenter/page/timer.dart';
 import 'package:get/get.dart';
 
 class GlobalPresenter extends GetxController {
@@ -17,6 +18,6 @@ class GlobalPresenter extends GetxController {
   static void profileImagePressed() {}
 
   static void initControllers() {
-
+    Get.put(TimerPresenter());
   }
 }

@@ -24,6 +24,8 @@ dependencies:
   intl: ^0.17.0
   pull_to_refresh: ^2.0.0
   material_tag_editor: ^0.1.2
+  flutter_svg: ^1.1.1+1
+  percent_indicator: ^4.2.2
 
 dev_dependencies:
   flutter_test:
@@ -49,6 +51,9 @@ flutter:
     - assets/image/page/add_plan/bulk_up.svg
     - assets/image/page/add_plan/diet.svg
     - assets/image/page/add_plan/etc.svg
+    - assets/image/page/timer/whale.svg
+    - assets/image/page/timer/sit.svg
+    - assets/image/page/timer/stand.svg
     - assets/json/exercises.json
 
 fonts:
