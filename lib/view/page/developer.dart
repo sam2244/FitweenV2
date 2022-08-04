@@ -1,4 +1,5 @@
 import 'package:fitweenV1/global/theme.dart';
+import 'package:fitweenV1/presenter/page/complete.dart';
 import 'package:fitweenV1/presenter/page/timer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -26,6 +27,10 @@ class DeveloperPage extends StatelessWidget {
             const TextButton(
               onPressed: TimerPresenter.toTimer,
               child: Text('TimerPage'),
+            ),
+            TextButton(
+              onPressed: () => CompletePresenter.toComplete(.125, .566),
+              child: const Text('CompletePage'),
             ),
             TextButton(
               onPressed: () => Get.toNamed('/detail'),
