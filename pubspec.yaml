@@ -41,6 +41,7 @@ flutter:
     - assets/image/logo/apple.svg
     - assets/image/logo/fitween.svg
     - assets/image/logo/google.svg
+    - assets/image/page/record/moai.svg
     - assets/image/page/greeting/greeting.svg
     - assets/image/page/onboarding/background.svg
     - assets/image/page/onboarding/carousel_01.svg
