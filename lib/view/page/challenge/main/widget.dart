@@ -1,6 +1,7 @@
 import 'package:fitweenV1/global/theme.dart';
 import 'package:fitweenV1/view/widget/widget/text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -123,6 +124,7 @@ class ChallengeCard extends StatelessWidget{
   final String measure;
   final String currentlevel;
   final String nextlevel;
+  final String image;
 
   const ChallengeCard({
     Key? key,
@@ -130,6 +132,7 @@ class ChallengeCard extends StatelessWidget{
     required this.measure,
     required this.currentlevel,
     required this.nextlevel,
+    required this.image,
   }) : super(key: key);
 
   @override
@@ -152,7 +155,7 @@ class ChallengeCard extends StatelessWidget{
             width: 104,
             height: 112,
             color: FWTheme.white,
-            //child: Image.asset('assets/image/page/record/moai.svg'),
+            child: SvgPicture.asset(image),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
