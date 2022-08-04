@@ -1,5 +1,6 @@
 /* 라우트 관련 */
 
+import 'package:fitweenV1/view/page/challenge/list/list.dart';
 import 'package:fitweenV1/view/page/challenge/main/main.dart';
 import 'package:fitweenV1/view/page/challenge/setting/setting.dart';
 import 'package:fitweenV1/view/page/challenge/timer/timer.dart';
@@ -21,19 +22,22 @@ class FWRoute {
   /// static methods
   // 라우트 문자열, 페이지 매핑
   static Map<String, Widget> get pages => {
-    '/developer': const DeveloperPage(),
-    '/timer': const TimerPage(),
-    '/challenge/main': const ChallengeMainPage(),
-    '/challenge/setting': const ChallengeSettingPage(),
-    '/detail': const DetailPage(),
-    '/record': const RecordPage(),
-  };
+        '/developer': const DeveloperPage(),
+        '/timer': const TimerPage(),
+        '/challenge/main': const ChallengeMainPage(),
+        '/challenge/setting': const ChallengeSettingPage(),
+        '/challenge/list': const ChallengeListPage(),
+        '/detail': const DetailPage(),
+        '/record': const RecordPage(),
+      };
 
   // 겟페이지 리스트
-  static List<GetPage> get getPages => pages.entries.map((page) => GetPage(
-    name: page.key,
-    page: () => page.value,
-    transition: transition,
-    transitionDuration: duration,
-  )).toList();
+  static List<GetPage> get getPages => pages.entries
+      .map((page) => GetPage(
+            name: page.key,
+            page: () => page.value,
+            transition: transition,
+            transitionDuration: duration,
+          ))
+      .toList();
 }
