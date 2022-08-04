@@ -26,6 +26,7 @@ dependencies:
   material_tag_editor: ^0.1.2
   percent_indicator: ^4.2.2
   carousel_slider: ^4.1.1
+  flutter_svg: ^1.1.1+1
 
 dev_dependencies:
   flutter_test:
@@ -51,7 +52,11 @@ flutter:
     - assets/image/page/add_plan/bulk_up.svg
     - assets/image/page/add_plan/diet.svg
     - assets/image/page/add_plan/etc.svg
+    - assets/image/page/timer/whale.svg
+    - assets/image/page/timer/sit.svg
+    - assets/image/page/timer/stand.svg
     - assets/json/exercises.json
+    - assets/image/page/challenge/whale.svg
 
 fonts:
   - family: Noto_Sans_KR
