@@ -15,8 +15,18 @@ class ChallengeMainPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             Text("오늘의 기록"),
-            ChallengeCard(rate: 0.1),
-            ChallengeCard(rate: 0.95),
+            ChallengeCard(
+              rate: 0.1,
+              measure: "오늘 들은 무게",
+              currentlevel: "모아이 석상",
+              nextlevel: "기린",
+            ),
+            ChallengeCard(
+              rate: 0.1,
+              measure: "오늘 오른 계단 높이",
+              currentlevel: "에펠탑",
+              nextlevel: "엠파이어 스테이트 빌딩",
+            )
           ],
         ),
       ),

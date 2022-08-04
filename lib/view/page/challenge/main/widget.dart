@@ -25,14 +25,14 @@ class MainDrawer extends StatelessWidget{
     return Drawer(
       child: ListView(
         children: [
-          const DrawerHeader(
+          /*const DrawerHeader(
             decoration: BoxDecoration(
               color: Colors.white,
             ),
             child: SizedBox(
               height: 10.0,
             )
-          ),
+          ),*/
           ListTile(
             leading: const Icon(Icons.home_outlined),
             title: const Text('메인'),
@@ -67,10 +67,16 @@ class MainDrawer extends StatelessWidget{
 
 class ChallengeCard extends StatelessWidget{
   final double rate;
+  final String measure;
+  final String currentlevel;
+  final String nextlevel;
 
   const ChallengeCard({
     Key? key,
     required this.rate,
+    required this.measure,
+    required this.currentlevel,
+    required this.nextlevel,
   }) : super(key: key);
 
   @override
@@ -96,9 +102,9 @@ class ChallengeCard extends StatelessWidget{
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("오늘 들은 무게"),
-              Text("모아이 석상"),
-              Text("다음 단계: 기린 까지"),
+              Text(measure),
+              Text(currentlevel),
+              Text("다음 단계: $nextlevel 까지"),
               Container(
                 width: 250,
                 //padding: const EdgeInsets.all(1.0),
