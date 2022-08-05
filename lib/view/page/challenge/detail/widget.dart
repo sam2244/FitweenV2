@@ -52,7 +52,7 @@ class ChallengeDetail extends StatelessWidget{
         builder: (controller) {
           return Center(
             child: Container(
-                padding: const EdgeInsets.only(bottom: 10.0, top: 53.0),
+                padding: const EdgeInsets.only(top: 53.0),
                 child: Column(
                   children: [
                     Container(
@@ -62,9 +62,11 @@ class ChallengeDetail extends StatelessWidget{
                       color: FWTheme.white,
                       child: SvgPicture.asset(image),
                     ),
-                    Text(measure),
-                    Text(currentlevel,
-                      style: textTheme.titleLarge,
+                    Padding(
+                      padding: const EdgeInsets.only(top: 16.0, bottom: 17.0),
+                      child: Text(currentlevel,
+                        style: textTheme.headlineMedium,
+                      ),
                     ),
                     Container(
                         padding: const EdgeInsets.only(top:18),

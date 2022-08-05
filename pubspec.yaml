@@ -45,6 +45,7 @@ flutter:
     - assets/image/logo/fitween.svg
     - assets/image/logo/google.svg
     - assets/image/page/record/moai.svg
+    - assets/image/page/record/moainew.svg
     - assets/image/page/record/eiffel.svg
     - assets/image/page/greeting/greeting.svg
     - assets/image/page/onboarding/background.svg

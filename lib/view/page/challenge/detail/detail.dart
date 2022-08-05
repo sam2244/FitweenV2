@@ -24,7 +24,7 @@ class ChallengeDetailPage extends StatelessWidget {
               measure: "오늘 들은 무게",
               currentlevel: "모아이 석상",
               nextlevel: "기린",
-              image: 'assets/image/page/record/moai.svg',
+              image: 'assets/image/page/record/moainew.svg',
             ),
           ],
         ),
