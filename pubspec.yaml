@@ -27,6 +27,8 @@ dependencies:
   percent_indicator: ^4.2.2
   carousel_slider: ^4.1.1
   flutter_svg: ^1.1.1+1
+  animated_flip_counter: ^0.2.4
+  lottie: ^1.4.1
 
 dev_dependencies:
   flutter_test:
@@ -42,6 +44,8 @@ flutter:
     - assets/image/logo/apple.svg
     - assets/image/logo/fitween.svg
     - assets/image/logo/google.svg
+    - assets/image/page/record/moai.svg
+    - assets/image/page/record/eiffel.svg
     - assets/image/page/greeting/greeting.svg
     - assets/image/page/onboarding/background.svg
     - assets/image/page/onboarding/carousel_01.svg
@@ -55,6 +59,10 @@ flutter:
     - assets/image/page/timer/whale.svg
     - assets/image/page/timer/sit.svg
     - assets/image/page/timer/stand.svg
+    - assets/image/page/complete/moai.svg
+    - assets/image/page/complete/trophy.svg
+    - assets/image/page/complete/giraffe.svg
+    - assets/json/lottie/level_up.json
     - assets/json/exercises.json
     - assets/image/page/challenge/whale.svg
     - assets/image/page/challenge/naro.svg
