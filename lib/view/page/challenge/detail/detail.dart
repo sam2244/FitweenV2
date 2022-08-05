@@ -19,6 +19,13 @@ class ChallengeDetailPage extends StatelessWidget {
             FWText("오늘의 들은 무게",
               style: textTheme.labelLarge,
             ),
+            const ChallengeDetail(
+              rate: 0.1,
+              measure: "오늘 들은 무게",
+              currentlevel: "모아이 석상",
+              nextlevel: "기린",
+              image: 'assets/image/page/record/moai.svg',
+            ),
           ],
         ),
       ),
