@@ -4,6 +4,7 @@ import 'package:fitweenV1/view/page/challenge/list/list.dart';
 import 'package:fitweenV1/view/page/challenge/main/main.dart';
 import 'package:fitweenV1/view/page/challenge/setting/setting.dart';
 import 'package:fitweenV1/view/page/challenge/timer/timer.dart';
+import 'package:fitweenV1/view/page/challenge/type/type.dart';
 import 'package:fitweenV1/view/page/developer.dart';
 import 'package:fitweenV1/view/page/main/detail/detail.dart';
 import 'package:fitweenV1/view/page/main/record/record.dart';
@@ -27,6 +28,7 @@ class FWRoute {
         '/challenge/main': const ChallengeMainPage(),
         '/challenge/setting': const ChallengeSettingPage(),
         '/challenge/list': const ChallengeListPage(),
+        '/challenge/type': const ChallengeTypePage(),
         '/detail': const DetailPage(),
         '/record': const RecordPage(),
       };

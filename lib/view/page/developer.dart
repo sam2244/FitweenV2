@@ -24,6 +24,10 @@ class DeveloperPage extends StatelessWidget {
               child: const Text('ChallengeSettingPage'),
             ),
             TextButton(
+              onPressed: () => Get.toNamed('/challenge/type'),
+              child: const Text('ChallengeTypePage'),
+            ),
+            TextButton(
               onPressed: () => Get.toNamed('/challenge/list'),
               child: const Text('ChallengeListPage'),
             ),

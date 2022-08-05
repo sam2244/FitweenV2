@@ -6,6 +6,9 @@ class ChallengeListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ListPage();
+    return Scaffold(
+        backgroundColor: const Color.fromRGBO(247, 236, 222, 1),
+        appBar: AppBar(),
+        body: const ListPage());
   }
 }
