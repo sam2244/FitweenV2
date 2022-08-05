@@ -59,7 +59,6 @@ class ChallengeDetail extends StatelessWidget{
                       margin: const EdgeInsets.all(8.0),
                       width: 298,
                       height: 242,
-                      color: FWTheme.white,
                       child: SvgPicture.asset(image),
                     ),
                     Padding(
