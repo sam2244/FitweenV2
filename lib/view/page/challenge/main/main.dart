@@ -9,15 +9,16 @@ class ChallengeMainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: MainDrawer(),
-      appBar: MainAppBar(),
+      drawer: const MainDrawer(),
+      appBar: const MainAppBar(),
       body: Container(
-        padding: const EdgeInsets.only(left:16.0, right: 16.0, top: 33.0),
+        padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 33.0),
         decoration: const BoxDecoration(color: Color(0xffF7ECDE)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            FWText("오늘의 기록",
+            FWText(
+              "오늘의 기록",
               style: textTheme.labelLarge,
             ),
             const ChallengeCard(
