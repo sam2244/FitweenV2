@@ -93,12 +93,19 @@ class ChallengeDetail extends StatelessWidget{
                       width: 300.0,
                       height: 250.0,
                       child: SfCalendar(
+                        view: CalendarView.week,
+                        cellEndPadding: 0.0,
+                        firstDayOfWeek: 1,
                         showCurrentTimeIndicator: false,
                         viewNavigationMode: ViewNavigationMode.none,
                         cellBorderColor: Colors.white,
                         headerHeight: 0.0,
-                        view: CalendarView.week,
                         todayHighlightColor: Color(0xff54BAB9),
+                        selectionDecoration: BoxDecoration(
+                          border:
+                          Border.all(color: Colors.transparent),
+                        ),
+                        dataSource: MeetingDataSource(getAppointments()),
                       ),
                     )
                   ],
@@ -107,5 +114,30 @@ class ChallengeDetail extends StatelessWidget{
           );
         }
     );
+  }
+}
+
+List<Appointment> getAppointments() {
+  List<Appointment> meetings = <Appointment>[];
+  final DateTime today = DateTime.now();
+  final DateTime startTime =
+  DateTime(today.year, today.month, today.day, 9, 0, 0);
+  final DateTime endTime = startTime.add(const Duration(hours: 3));
+
+  meetings.add(
+    Appointment(
+      startTime: startTime,
+      endTime: endTime,
+      color: const Color(0xff54BAB9),
+      isAllDay: false,
+    ),
+  );
+
+  return meetings;
+}
+
+class MeetingDataSource extends CalendarDataSource {
+  MeetingDataSource(List<Appointment> source) {
+    appointments = source;
   }
 }
