@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
 
 class DetailAppBar extends StatelessWidget implements PreferredSizeWidget {
   const DetailAppBar({Key? key}) : super(key: key);
@@ -88,6 +89,14 @@ class ChallengeDetail extends StatelessWidget{
                         percent: percent,
                       ),
                     ),
+                    Container(
+                      width: 300.0,
+                      height: 200.0,
+                      child: SfCalendar(
+                        view: CalendarView.week,
+                        todayHighlightColor: Color(0xff54BAB9),
+                      ),
+                    )
                   ],
                 )
             ),
