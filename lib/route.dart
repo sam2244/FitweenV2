@@ -1,11 +1,11 @@
 /* 라우트 관련 */
 
 import 'package:fitweenV1/view/page/challenge/complete/complete.dart';
+import 'package:fitweenV1/view/page/challenge/detail/detail.dart';
 import 'package:fitweenV1/view/page/challenge/main/main.dart';
 import 'package:fitweenV1/view/page/challenge/setting/setting.dart';
 import 'package:fitweenV1/view/page/challenge/timer/timer.dart';
 import 'package:fitweenV1/view/page/developer.dart';
-import 'package:fitweenV1/view/page/main/detail/detail.dart';
 import 'package:fitweenV1/view/page/main/record/record.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,7 +27,7 @@ class FWRoute {
     '/challenge/main': const ChallengeMainPage(),
     '/challenge/setting': const ChallengeSettingPage(),
     '/complete': const CompletePage(),
-    '/detail': const DetailPage(),
+    '/detail': const ChallengeDetailPage(),
     '/record': const RecordPage(),
   };
 

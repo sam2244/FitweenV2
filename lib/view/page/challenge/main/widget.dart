@@ -140,55 +140,58 @@ class ChallengeCard extends StatelessWidget{
     double percent = rate;
     if (rate == .0) percent = .05;
 
-    return Container(
-      margin: const EdgeInsets.only(bottom: 10.0, top: 14.0),
-        decoration: BoxDecoration(
-            color: FWTheme.white,
-            borderRadius: BorderRadius.circular(20),
-            //border: Border.all(color: Theme.of(context).colorScheme.outline)
-        ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            margin: const EdgeInsets.all(8.0),
-            width: 104,
-            height: 112,
-            color: FWTheme.white,
-            child: SvgPicture.asset(image),
+    return InkWell(
+      onTap: () => {},
+      child: Container(
+        margin: const EdgeInsets.only(bottom: 10.0, top: 14.0),
+          decoration: BoxDecoration(
+              color: FWTheme.white,
+              borderRadius: BorderRadius.circular(20),
+              //border: Border.all(color: Theme.of(context).colorScheme.outline)
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(measure),
-              Text(currentlevel,
-                style: textTheme.titleLarge,
-              ),
-              Container(
-                  padding: const EdgeInsets.only(top:18),
-                  child: Text("다음 단계: $nextlevel 까지")
-              ),
-              Container(
-                width: 250,
-                padding: const EdgeInsets.all(1.0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              margin: const EdgeInsets.all(8.0),
+              width: 104,
+              height: 112,
+              color: FWTheme.white,
+              child: SvgPicture.asset(image),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(measure),
+                Text(currentlevel,
+                  style: textTheme.titleLarge,
+                ),
+                Container(
+                    padding: const EdgeInsets.only(top:18),
+                    child: Text("다음 단계: $nextlevel 까지")
+                ),
+                Container(
+                  width: 250,
+                  padding: const EdgeInsets.all(1.0),
 
-                decoration: BoxDecoration(
-                  //border: Border.all(color: Theme.of(context).colorScheme.outline),
-                  borderRadius: BorderRadius.circular(100.0),
+                  decoration: BoxDecoration(
+                    //border: Border.all(color: Theme.of(context).colorScheme.outline),
+                    borderRadius: BorderRadius.circular(100.0),
+                  ),
+                  child: LinearPercentIndicator(
+                    padding: EdgeInsets.zero,
+                    lineHeight: 10,
+                    backgroundColor: const Color(0xffD9D9D9),
+                    progressColor: const Color(0xff54BAB9).withOpacity(.3 + percent * 7 / 10),
+                    barRadius: const Radius.circular(10.0),
+                    percent: percent,
+                  ),
                 ),
-                child: LinearPercentIndicator(
-                  padding: EdgeInsets.zero,
-                  lineHeight: 10,
-                  backgroundColor: const Color(0xffD9D9D9),
-                  progressColor: const Color(0xff54BAB9).withOpacity(.3 + percent * 7 / 10),
-                  barRadius: const Radius.circular(10.0),
-                  percent: percent,
-                ),
-              ),
-            ],
-          )
-        ],
-      )
+              ],
+            )
+          ],
+        )
+      ),
     );
   }
 }
