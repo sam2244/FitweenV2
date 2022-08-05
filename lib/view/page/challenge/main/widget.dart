@@ -145,7 +145,7 @@ class ChallengeCard extends StatelessWidget{
         decoration: BoxDecoration(
             color: FWTheme.white,
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Colors.blueAccent)
+            //border: Border.all(color: Theme.of(context).colorScheme.outline)
         ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -170,15 +170,16 @@ class ChallengeCard extends StatelessWidget{
               ),
               Container(
                 width: 250,
-                //padding: const EdgeInsets.all(1.0),
+                padding: const EdgeInsets.all(1.0),
+
                 decoration: BoxDecoration(
-                  border: Border.all(color: Theme.of(context).colorScheme.outline),
+                  //border: Border.all(color: Theme.of(context).colorScheme.outline),
                   borderRadius: BorderRadius.circular(100.0),
                 ),
                 child: LinearPercentIndicator(
                   padding: EdgeInsets.zero,
                   lineHeight: 10,
-                  backgroundColor: Colors.transparent,
+                  backgroundColor: const Color(0xffD9D9D9),
                   progressColor: const Color(0xff54BAB9).withOpacity(.3 + percent * 7 / 10),
                   barRadius: const Radius.circular(10.0),
                   percent: percent,
