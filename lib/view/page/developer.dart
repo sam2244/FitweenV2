@@ -17,6 +17,10 @@ class DeveloperPage extends StatelessWidget {
         child: Column(
           children: [
             TextButton(
+              onPressed: () => Get.toNamed('/start'),
+              child: const Text('StartPage'),
+            ),
+            TextButton(
               onPressed: () => Get.toNamed('/challenge/main'),
               child: const Text('ChallengeMainPage'),
             ),

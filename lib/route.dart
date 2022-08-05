@@ -1,5 +1,4 @@
 /* 라우트 관련 */
-
 import 'package:fitweenV1/view/page/challenge/list/list.dart';
 import 'package:fitweenV1/view/page/challenge/complete/complete.dart';
 import 'package:fitweenV1/view/page/challenge/detail/detail.dart';
@@ -9,6 +8,7 @@ import 'package:fitweenV1/view/page/challenge/timer/timer.dart';
 import 'package:fitweenV1/view/page/challenge/type/type.dart';
 import 'package:fitweenV1/view/page/developer.dart';
 import 'package:fitweenV1/view/page/main/record/record.dart';
+import 'package:fitweenV1/view/page/main/start/start.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -33,6 +33,7 @@ class FWRoute {
         '/complete': const CompletePage(),
         '/detail': const ChallengeDetailPage(),
         '/record': const RecordPage(),
+        '/start': const StartPage(),
       };
 
 // 겟페이지 리스트
