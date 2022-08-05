@@ -29,6 +29,7 @@ dependencies:
   flutter_svg: ^1.1.1+1
   animated_flip_counter: ^0.2.4
   lottie: ^1.4.1
+  syncfusion_flutter_calendar: ^20.2.40
 
 dev_dependencies:
   flutter_test:
@@ -44,7 +45,7 @@ flutter:
     - assets/image/logo/apple.svg
     - assets/image/logo/fitween.svg
     - assets/image/logo/google.svg
-    - assets/image/page/record/moai.svg
+    - assets/image/page/record/moaistone.svg
     - assets/image/page/record/eiffel.svg
     - assets/image/page/greeting/greeting.svg
     - assets/image/page/onboarding/background.svg
