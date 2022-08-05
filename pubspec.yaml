@@ -24,8 +24,9 @@ dependencies:
   intl: ^0.17.0
   pull_to_refresh: ^2.0.0
   material_tag_editor: ^0.1.2
-  flutter_svg: ^1.1.1+1
   percent_indicator: ^4.2.2
+  carousel_slider: ^4.1.1
+  flutter_svg: ^1.1.1+1
   animated_flip_counter: ^0.2.4
   lottie: ^1.4.1
 
@@ -63,6 +64,10 @@ flutter:
     - assets/image/page/complete/giraffe.svg
     - assets/json/lottie/level_up.json
     - assets/json/exercises.json
+    - assets/image/page/challenge/whale.svg
+    - assets/image/page/challenge/naro.svg
+    - assets/image/page/exercise/push-up.svg
+
 
 fonts:
   - family: Noto_Sans_KR
