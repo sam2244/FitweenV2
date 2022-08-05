@@ -25,7 +25,7 @@ class ChallengeMainPage extends StatelessWidget {
               measure: "오늘 들은 무게",
               currentlevel: "모아이 석상",
               nextlevel: "기린",
-              image: 'assets/image/page/record/moai.svg',
+              image: 'assets/image/page/record/moaistone.svg',
             ),
             const ChallengeCard(
               rate: 0.1,
