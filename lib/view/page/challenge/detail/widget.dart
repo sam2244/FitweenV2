@@ -63,7 +63,7 @@ class ChallengeDetail extends StatelessWidget{
                       child: SvgPicture.asset(image),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 16.0, bottom: 17.0),
+                      padding: const EdgeInsets.only(top: 16.0,),
                       child: Text(currentlevel,
                         style: textTheme.headlineMedium,
                       ),
@@ -91,8 +91,12 @@ class ChallengeDetail extends StatelessWidget{
                     ),
                     Container(
                       width: 300.0,
-                      height: 200.0,
+                      height: 250.0,
                       child: SfCalendar(
+                        showCurrentTimeIndicator: false,
+                        viewNavigationMode: ViewNavigationMode.none,
+                        cellBorderColor: Colors.white,
+                        headerHeight: 0.0,
                         view: CalendarView.week,
                         todayHighlightColor: Color(0xff54BAB9),
                       ),
