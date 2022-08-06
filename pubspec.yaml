@@ -58,9 +58,12 @@ flutter:
     - assets/image/page/timer/whale.svg
     - assets/image/page/timer/sit.svg
     - assets/image/page/timer/stand.svg
+    - assets/image/page/timer/left_arrow.svg
+    - assets/image/page/timer/right_arrow.svg
     - assets/image/page/complete/moai.svg
     - assets/image/page/complete/trophy.svg
     - assets/image/page/complete/giraffe.svg
+    - assets/image/page/complete/elephant.svg
     - assets/json/lottie/level_up.json
     - assets/json/exercises.json
 

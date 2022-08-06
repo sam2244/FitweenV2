@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:fitweenV1/presenter/page/complete.dart';
 import 'package:get/get.dart';
 
 enum ExerciseState { ready, ongoing, pause, stop }
@@ -63,4 +64,6 @@ class TimerPresenter extends GetxController {
     state = ExerciseState.stop;
     second = 3; count = 0; update();
   }
+
+  void finishExercise() => CompletePresenter.toComplete(.122, .533);
 }
