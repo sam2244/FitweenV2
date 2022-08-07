@@ -30,6 +30,7 @@ dependencies:
   animated_flip_counter: ^0.2.4
   lottie: ^1.4.1
   syncfusion_flutter_calendar: ^20.2.40
+  dotted_border: ^2.0.0+2
 
 dev_dependencies:
   flutter_test:
@@ -42,32 +43,11 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/image/logo/apple.svg
-    - assets/image/logo/fitween.svg
-    - assets/image/logo/google.svg
-    - assets/image/page/record/moaistone.svg
-    - assets/image/page/record/eiffel.svg
-    - assets/image/page/greeting/greeting.svg
-    - assets/image/page/onboarding/background.svg
-    - assets/image/page/onboarding/carousel_01.svg
-    - assets/image/page/onboarding/carousel_02.svg
-    - assets/image/page/onboarding/carousel_03.svg
-    - assets/image/page/onboarding/carousel_04.svg
-    - assets/image/page/onboarding/carousel_05.svg
-    - assets/image/page/add_plan/bulk_up.svg
-    - assets/image/page/add_plan/diet.svg
-    - assets/image/page/add_plan/etc.svg
-    - assets/image/page/timer/whale.svg
-    - assets/image/page/timer/sit.svg
-    - assets/image/page/timer/stand.svg
-    - assets/image/page/complete/moai.svg
-    - assets/image/page/complete/trophy.svg
-    - assets/image/page/complete/giraffe.svg
-    - assets/json/lottie/level_up.json
-    - assets/json/exercises.json
-    - assets/image/page/challenge/whale.svg
-    - assets/image/page/challenge/naro.svg
-    - assets/image/page/exercise/push-up.svg
+    - assets/image/logo/
+    - assets/image/object/
+    - assets/image/exercise/
+    - assets/image/page/timer/
+    - assets/json/lottie/
 
 
 fonts:

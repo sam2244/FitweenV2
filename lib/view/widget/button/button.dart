@@ -25,16 +25,58 @@ class FWButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: colorScheme.primary,
+      color: const Color(0xff54bab9),
+      borderRadius: BorderRadius.circular(20.0),
       child: InkWell(
         onTap: onPressed,
+        borderRadius: BorderRadius.circular(20.0),
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 30.0, vertical: 10.0,
+          ),
           child: child ?? FWText(text!,
-            color: colorScheme.onPrimary,
+            color: FWTheme.white,
           ),
         ),
       ),
     );
   }
 }
+
+class FWDirectButton extends StatelessWidget {
+  const FWDirectButton({
+    Key? key,
+    required this.text,
+    required this.onPressed,
+  }) : super(key: key);
+
+  final String text;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onPressed,
+      child: Container(
+        padding: const EdgeInsets.all(2.0),
+        decoration: const BoxDecoration(
+          border: Border(
+            bottom: BorderSide(color: FWTheme.black),
+          ),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FWText(text,
+              color: FWTheme.black,
+              style: const TextStyle(fontSize: 13.0),
+            ),
+            const Icon(Icons.arrow_forward_ios, size: 15.0),
+          ],
+        ),
+      ),
+    );
+  }
+}
+

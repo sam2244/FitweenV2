@@ -1,203 +1,98 @@
-import 'package:fitweenV1/global/theme.dart';
-import 'package:fitweenV1/presenter/page/challenge.dart';
-import 'package:fitweenV1/view/widget/widget/text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
-import 'package:percent_indicator/percent_indicator.dart';
 
-class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const MainAppBar({Key? key}) : super(key: key);
-
-  @override
-  Size get preferredSize => const Size.fromHeight(50.0);
+class ChallengeListView extends StatelessWidget {
+  const ChallengeListView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      elevation: 0.0,
-      title: FWText('Fitween',
-        style:textTheme.headlineMedium,
-        color: FWTheme.white,
-      ),
-        iconTheme: const IconThemeData(color: FWTheme.white),
-        backgroundColor: const Color(0xff54BAB9),
-    );
-  }
-}
-
-class MainDrawer extends StatelessWidget{
-  const MainDrawer({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 170,
-      child: Drawer(
-        child: Container(
-          padding: const EdgeInsets.only(top:80),
-          color: const Color(0xff54BAB9),
-          child: ListView(
-            children: [
-              /*const DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                ),
-                child: SizedBox(
-                  height: 10.0,
-                )
-              ),*/
-              Container(
-                padding: const EdgeInsets.only(top:15,bottom:15),
-                child: ListTile(
-                  leading: const Icon(Icons.home_outlined,
-                  color: FWTheme.white,
-                  ),
-                  title: FWText('메인',
-                    style: textTheme.bodyLarge,
-                    color: FWTheme.white,
-                  ),
-                  onTap: () => {},
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.only(top:15,bottom:15),
-                child: ListTile(
-                  leading: const Icon(Icons.people_alt_outlined,
-                    color: FWTheme.white,
-                  ),
-                  title: FWText('첼린지',
-                    style: textTheme.bodyLarge,
-                    color: FWTheme.white,
-                  ),
-                  onTap: () => {},
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.only(top:15,bottom:15),
-                child: ListTile(
-                  leading: const Icon(Icons.book_outlined,
-                    color: FWTheme.white,
-                  ),
-                  title: FWText('크루',
-                    style: textTheme.bodyLarge,
-                    color: FWTheme.white,
-                  ),
-                  onTap: () => {},
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.only(top:15,bottom:15),
-                child: ListTile(
-                  leading: const Icon(Icons.dialpad,
-                    color: FWTheme.white,
-                  ),
-                  title: FWText('컬렉션',
-                    style: textTheme.bodyLarge,
-                    color: FWTheme.white,
-                  ),
-                  onTap: () => {},
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.only(top:15,bottom:15),
-                child: ListTile(
-                  leading: const Icon(Icons.settings,
-                    color: FWTheme.white,
-                  ),
-                  title: FWText('설정',
-                    style: textTheme.bodyLarge,
-                    color: FWTheme.white,
-                  ),
-                  onTap: () => {},
-                ),
-              ),
-            ],
+    return SingleChildScrollView(
+      child: Column(
+        children: const [
+          ChallengeCard(
+            color: 0xff3198D1,
+            buttonColor: 0xff11456A,
+            imageUrl: 'assets/image/object/beach.svg',
+            title: '향고래에게\n무슨 일이?',
+            desc: '갑자기 해변에 떠내려온 향고래 한마리!\n도대체 무슨 일이지?',
           ),
-        ),
-
+          ChallengeCard(
+            color: 0xff404040,
+            buttonColor: 0xff000000,
+            imageUrl: 'assets/image/object/naroho.svg',
+            title: '발사가\n코앞인데...',
+            desc: '발사가 코앞으로 다가왔는데\n나로호를 발사하지 못하는 속사정은?',
+          ),
+        ],
       ),
     );
   }
 }
 
-class ChallengeCard extends StatelessWidget{
-  final double rate;
-  final String measure;
-  final String currentlevel;
-  final String nextlevel;
-  final String image;
+class ChallengeCard extends StatelessWidget {
+  final int color;
+  final int buttonColor;
+  final String imageUrl;
+  final String title;
+  final String desc;
 
-  const ChallengeCard({
-    Key? key,
-    required this.rate,
-    required this.measure,
-    required this.currentlevel,
-    required this.nextlevel,
-    required this.image,
-  }) : super(key: key);
+  const ChallengeCard(
+      {Key? key,
+        required this.color,
+        required this.buttonColor,
+        required this.imageUrl,
+        required this.title,
+        required this.desc})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    double percent = rate;
-    if (rate == .0) percent = .05;
-
-    return GetBuilder<ChallengePresenter>(
-      builder: (controller) {
-        return InkWell(
-          onTap: () => controller.challengeCardPressed(),
-          child: Container(
-            margin: const EdgeInsets.only(bottom: 10.0, top: 14.0),
-              decoration: BoxDecoration(
-                  color: FWTheme.white,
-                  borderRadius: BorderRadius.circular(20),
-                  //border: Border.all(color: Theme.of(context).colorScheme.outline)
-              ),
-            child: Row(
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: SizedBox(
+        height: 500.0,
+        child: Card(
+          color: Color(color),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  margin: const EdgeInsets.all(8.0),
-                  width: 104,
-                  height: 112,
-                  color: FWTheme.white,
-                  child: SvgPicture.asset(image),
+                Center(
+                  child: SvgPicture.asset(
+                    imageUrl,
+                    height: 220.0,
+                  ),
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(measure),
-                    Text(currentlevel,
-                      style: textTheme.titleLarge,
+                const SizedBox(height: 16.0),
+                Text(
+                  title,
+                  style: const TextStyle(color: Colors.white, fontSize: 36.0),
+                ),
+                Text(
+                  desc,
+                  style: const TextStyle(color: Colors.white, fontSize: 16.0),
+                ),
+                const SizedBox(height: 16.0),
+                Center(
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(buttonColor),
+                      fixedSize: const Size.fromWidth(200.0),
                     ),
-                    Container(
-                        padding: const EdgeInsets.only(top:18),
-                        child: Text("다음 단계: $nextlevel 까지")
+                    onPressed: null,
+                    child: const Text(
+                      '알아보러 가기',
+                      style:
+                      TextStyle(color: Color(0xffFFFFFF), fontSize: 16.0),
                     ),
-                    Container(
-                      width: 250,
-                      padding: const EdgeInsets.all(1.0),
-
-                      decoration: BoxDecoration(
-                        //border: Border.all(color: Theme.of(context).colorScheme.outline),
-                        borderRadius: BorderRadius.circular(100.0),
-                      ),
-                      child: LinearPercentIndicator(
-                        padding: EdgeInsets.zero,
-                        lineHeight: 10,
-                        backgroundColor: const Color(0xffD9D9D9),
-                        progressColor: const Color(0xff54BAB9).withOpacity(.3 + percent * 7 / 10),
-                        barRadius: const Radius.circular(10.0),
-                        percent: percent,
-                      ),
-                    ),
-                  ],
-                )
+                  ),
+                ),
               ],
-            )
+            ),
           ),
-        );
-      }
+        ),
+      ),
     );
   }
 }

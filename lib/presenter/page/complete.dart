@@ -12,19 +12,20 @@ class CompletePresenter extends GetxController {
   int assetIndex = 0;
 
   List<String> assets = [
-    'assets/image/page/complete/moai.svg',
-    'assets/image/page/complete/giraffe.svg',
+    'assets/image/object/moai_stone.svg',
+    'assets/image/object/elephant.svg',
   ];
-  List<String> titles = ['모아이 석상', '기린'];
+  List<String> titles = ['모아이 석상', '코끼리'];
 
   static void toComplete(double degree, [double? degree2]) {
     final completePresenter = Get.find<CompletePresenter>();
-    Get.toNamed('/complete');
+    Get.toNamed('/exercise/complete');
     completePresenter.initPercent();
     completePresenter.increasePercent(degree, degree2);
   }
 
   void initPercent() {
+    assetIndex = 0;
     before = .60; after = before;
     before2 = .50; after2 = before2;
     update();

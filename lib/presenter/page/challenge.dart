@@ -7,8 +7,5 @@ import 'package:get/get.dart';
 class ChallengePresenter extends GetxController {
 
   /// methods
-  // 특정 크루 카드 클릭 시
-  void challengeCardPressed() async {
-    await DetailPresenter.toDetail();
-  }
+  static void toChallengeMain() => Get.toNamed('/challenge/main');
 }
