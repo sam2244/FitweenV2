@@ -1,7 +1,7 @@
 import 'package:fitweenV1/presenter/page/challenge.dart';
 import 'package:fitweenV1/presenter/page/challengedetail.dart';
 import 'package:fitweenV1/presenter/page/complete.dart';
-import 'package:fitweenV1/presenter/page/timer.dart';
+import 'package:fitweenV1/presenter/page/exercise.dart';
 import 'package:get/get.dart';
 
 class GlobalPresenter extends GetxController {
@@ -21,7 +21,7 @@ class GlobalPresenter extends GetxController {
   static void profileImagePressed() {}
 
   static void initControllers() {
-    Get.put(TimerPresenter());
+    Get.put(ExercisePresenter());
     Get.put(CompletePresenter());
     Get.put(ChallengePresenter());
     Get.put(DetailPresenter());
